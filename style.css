@@ -1,0 +1,139 @@
+/* Configurações Gerais e Cores */
+:root {
+  --bg-color: #f0f2f5;
+  --card-bg: #ffffff;
+  --primary: #2563eb;
+  --primary-hover: #1d4ed8;
+  --text-main: #1e293b;
+  --text-muted: #64748b;
+  --border-color: #cbd5e1;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 1rem;
+}
+
+/* Container Principal (O Cartão Central) */
+.container {
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 420px;
+  box-sizing: border-box;
+}
+
+/* Cabeçalho */
+header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+header h1 {
+  font-size: 1.5rem;
+  color: var(--text-main);
+  margin-bottom: 0.5rem;
+}
+
+header h2 {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  font-weight: normal;
+  margin-bottom: 1rem;
+}
+
+header p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+  background-color: #f8fafc;
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  text-align: left;
+}
+
+/* Grupos de Inputs */
+.input-group {
+  margin-bottom: 1.2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  color: var(--text-main);
+}
+
+input {
+  padding: 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+/* Botão de Calcular */
+button[type="submit"] {
+  width: 100%;
+  padding: 0.85rem;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-top: 0.5rem;
+}
+
+button[type="submit"]:hover {
+  background-color: var(--primary-hover);
+}
+
+/* Card de Resultado */
+.result-card {
+  margin-top: 1.5rem;
+  padding: 1.25rem;
+  border-radius: 8px;
+  background-color: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  text-align: left;
+}
+
+.result-card h2 {
+  font-size: 1.1rem;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: #166534;
+}
+
+.result-card p {
+  font-size: 0.9rem;
+  color: #15803d;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Classe utilitária para esconder elementos (usada pelo JS) */
+.hidden {
+  display: none;
+}

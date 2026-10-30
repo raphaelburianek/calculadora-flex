@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora Flex & Economia</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="container">
+    <header>
+      <h1>Calculadora Flex & Economia</h1>
+      <h2>Saiba qual combutivel compesa mais abastecer.</h2>
+      <p>O etanol rende menos que a gasolina no motor (cerca de 70%). Por isso, o cálculo é simples: se o preço do etanol custar até 70% do valor da gasolina, ele compensa mais. Acima disso, a gasolina passa a ser a melhor opção para o seu bolso.</p>
+    </header>
+
+    <form id="calc-form">
+      <div class="input-group">
+        <label for="gasolina">Preço da Gasolina (R$)</label>
+        <input type="number" id="gasolina" step="0.01" placeholder="Ex: 5.89" required>
+      </div>
+
+      <div class="input-group">
+        <label for="etanol">Preço do Etanol (R$)</label>
+        <input type="number" id="etanol" step="0.01" placeholder="Ex: 3.99" required>
+      </div>
+
+      <button type="submit">CALCULAR MELHOR OPÇÃO</button>
+    </form>
+
+    
+    <section id="result" class="result-card hidden">
+      <h2 id="result-title"></h2> <!--Título do Resultado vai aparecer aqui-->
+      <p id="result-text"></p> <!--O texto explicativo vai aparecer aqui após o cálculo.-->
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
